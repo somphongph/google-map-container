@@ -1,7 +1,7 @@
 # gmap-container
 Run frontend and backend 
 
-git clone https://github.com/somphongph/gmap-netcore.git
+git clone https://github.com/somphongph/gmap-container.git
 
 git submodule init
 
@@ -23,3 +23,7 @@ Create and Setup .env (See example .env.example)
 cd gmap-container
 docker-compose build
 docker-compose up
+
+
+Open browser
+http://devweb.local

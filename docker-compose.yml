@@ -37,7 +37,7 @@ services:
             - gmap-backtend
             
     gmap-redis:
-        image: "redis:alpine"
+        image: "redis:6.0-alpine"
         container_name: gmap-redis
         networks:
             - gmap-backtend
