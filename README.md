@@ -2,7 +2,7 @@
 Run frontend and backend 
 
 
-### Git clone
+### 1. Git clone
 
 ```
 git clone https://github.com/somphongph/gmap-container.git
@@ -11,7 +11,7 @@ git submodule update
 ```
 
 
-### Host file
+### 2. Host file
 Add Host file (C:\Windows\System32\drivers\etc)
 ```
 127.0.0.1       devweb.local
@@ -19,14 +19,14 @@ Add Host file (C:\Windows\System32\drivers\etc)
 ```
 
 
-### Create and Setup Config file
+### 3. Create and Setup Config file
 ##### gmap-netcore
 Create and Setup appsettings.json (See example appsettings.example.json)
 
 ##### gmap-vue
 Create and Setup .env (See example .env.example)
 
-### Run
+### 4. Run
 ```
 cd gmap-container
 ```
@@ -36,6 +36,6 @@ docker-compose build
 docker-compose up
 ```
 
-### Test
+### 5. Test
 Open browser
 http://devweb.local
