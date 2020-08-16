@@ -1,0 +1,49 @@
+version: '3.4'
+
+services:
+    gmap-nginx:
+        image: nginx:1.17-alpine
+        container_name: gmap-nginx        
+        restart: always
+        volumes:
+            - ./nginx:/etc/nginx
+        #    - /var/log/nginx:/var/log/nginx
+        #    - /etc/letsencrypt:/etc/letsencrypt
+        ports:
+            - "80:80"
+        #    - "443:443"
+        networks:
+            - gmap-frontend 
+            - gmap-backtend
+
+    gmap-web:
+        container_name: gmap-web
+        restart: always
+        build:
+            context: ../vue-google-map
+            target: 'production-stage'
+        volumes:
+            - '/app/node_modules'
+            - '.:/app'
+        networks:
+            - gmap-frontend 
+            
+    gmap-api:
+        container_name: gmap-api
+        restart: always
+        build:
+            context: ../netcore-google-map
+        networks:
+            - gmap-backtend
+            
+    gmap-redis:
+        image: "redis:alpine"
+        container_name: gmap-redis
+        networks:
+            - gmap-backtend
+    
+networks:
+    gmap-frontend:
+        driver: bridge
+    gmap-backtend:
+        driver: bridge
