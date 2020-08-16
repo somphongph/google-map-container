@@ -20,7 +20,7 @@ services:
         container_name: gmap-web
         restart: always
         build:
-            context: ../vue-google-map
+            context: ./gmap-vue
             target: 'production-stage'
         volumes:
             - '/app/node_modules'
@@ -32,12 +32,12 @@ services:
         container_name: gmap-api
         restart: always
         build:
-            context: ../netcore-google-map
+            context: ./gmap-netcore
         networks:
             - gmap-backtend
             
     gmap-redis:
-        image: "redis:alpine"
+        image: "redis:6.0-alpine"
         container_name: gmap-redis
         networks:
             - gmap-backtend
