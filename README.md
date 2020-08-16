@@ -2,12 +2,10 @@
 Run frontend and backend 
 
 
-### 1. Git clone
+### 1. Git clone (With git submodule)
 
 ```
-git clone https://github.com/somphongph/gmap-container.git
-git submodule init
-git submodule update
+git clone --recurse-submodules https://github.com/somphongph/gmap-container.git
 ```
 
 
