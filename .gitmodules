@@ -1,8 +1,8 @@
 [submodule "gmap-netcore"]
 	path = gmap-netcore
-	url = https://github.com/somphongph/gmap-netcore.git
+	url = https://github.com/somphongph/google-map-netcore.git
 	branch = master
 [submodule "gmap-vue"]
 	path = gmap-vue
-	url = https://github.com/somphongph/gmap-vue.git
+	url = https://github.com/somphongph/google-map-vue.git
 	branch = master
